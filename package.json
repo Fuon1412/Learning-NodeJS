@@ -1,0 +1,18 @@
+{
+  "name": "full_be_zero",
+  "version": "1.0.0",
+  "description": "learn to build a webpage",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node_js"
+  ],
+  "author": "Fuon1412",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
