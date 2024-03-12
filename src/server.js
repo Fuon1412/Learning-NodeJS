@@ -9,9 +9,11 @@ const hostname = process.env.HOSTNAME; //localhost
 //config template 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
+//config static file
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World with nodejs and express')
 })
 app.get('/dumb', (req, res) => {
   res.render('sample.ejs')
