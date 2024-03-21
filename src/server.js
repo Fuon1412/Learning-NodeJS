@@ -11,14 +11,6 @@ const hostname = process.env.HOSTNAME; //localhost
 
 configViewEngine(app);
 
-
-connection.query(
-      'select * from Users u',
-      function (err,results, fields){
-        console.log(results);
-      }
-);
-
 app.use('/', webRoutes);
 app.listen(port,hostname, () => {
   console.log(`Example app listening on port ${port}`)
