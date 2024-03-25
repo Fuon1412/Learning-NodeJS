@@ -11,6 +11,9 @@ const hostname = process.env.HOSTNAME; //localhost
 
 configViewEngine(app);
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use('/', webRoutes);
 app.listen(port,hostname, () => {
   console.log(`Example app listening on port ${port}`)
