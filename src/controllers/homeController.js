@@ -9,8 +9,18 @@ const getDumbPage = (req, res) => {
 };
 
 const postCreateUser = (req, res) => {
-  console.log(req.body);
-  conslole.log(req.body);
+  let { email, name, city } = req.body;
+  connection.query(
+    `INSERT INTO 
+    Users (email, name, city) 
+    VALUES (?, ?, ?)`,
+    [email, name, city],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+    }
+  )
   res.send('User created');
 };
 module.exports = {
