@@ -22,41 +22,30 @@
 <body>
     <div class="topnav">
         <a class="active" href="/">Home</a>
-        <a href="/create">Create users</a>
+        <a href="/create">Create listUsers</a>
       </div>
       <div class="table-container">
-        <div class="title">Users list</div>
+        <div class="title">listUsers list</div>
       <table>
         <tr>
           <th>ID</th>
           <th>Email</th>
           <th>Name</th>
           <th>City</th>
+          <th>Actions</th>
         </tr>
-        <tr>
-          <td>Peter</td>
-          <td>Griffin</td>
-          <td>$100</td>
-          <td>$100</td>
-        </tr>
-        <tr>
-          <td>Lois</td>
-          <td>Griffin</td>
-          <td>$150</td>
-          <td>$100</td>
-        </tr>
-        <tr>
-          <td>Joe</td>
-          <td>Swanson</td>
-          <td>$300</td>
-          <td>$100</td>
-        </tr>
-        <tr>
-          <td>Cleveland</td>
-          <td>Brown</td>
-          <td>$250</td> 
-          <td>$100</td>
-        </tr>
+        <% listUsers.forEcach(function(user) { %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+            <td><%= user.name %></td>
+            <td><%= user.city %></td>
+            <td>
+              <a href="/edit/<%= user.id %>">Edit</a>
+              <a href="/delete/<%= user.id %>">Delete</a>
+            </td>
+          </tr>
+        <% }); %>
       </table>
     </div>
 </body>
