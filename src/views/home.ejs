@@ -34,15 +34,15 @@
           <th>City</th>
           <th>Actions</th>
         </tr>
-        <% listUsers.forEcach(function(user) { %>
+        <% listUsers.forEach(function(user) { %>
           <tr>
             <td><%= user.id %></td>
             <td><%= user.email %></td>
             <td><%= user.name %></td>
             <td><%= user.city %></td>
             <td>
-              <a href="/edit/<%= user.id %>">Edit</a>
-              <a href="/delete/<%= user.id %>">Delete</a>
+              <a href="/update">Edit</a>
+              <a href="/delete">Delete</a>
             </td>
           </tr>
         <% }); %>
