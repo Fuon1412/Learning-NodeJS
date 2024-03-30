@@ -22,7 +22,7 @@
 <body>
     <div class="topnav">
         <a class="active" href="/">Home</a>
-        <a href="/create">Create listUsers</a>
+        <a href="/create">Create users</a>
       </div>
       <div class="table-container">
         <div class="title">listUsers list</div>
@@ -41,8 +41,8 @@
             <td><%= user.name %></td>
             <td><%= user.city %></td>
             <td>
-              <a href="/update">Edit</a>
-              <a href="/delete">Delete</a>
+              <a href="/update/<%= user.id %>">Edit</a>
+              <a href="/delete-user/<%= user.id %>">Delete</a>
             </td>
           </tr>
         <% }); %>
